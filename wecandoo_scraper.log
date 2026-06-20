@@ -1,0 +1,37 @@
+=== Wecandoo Scraper v6  2026-04-23 08:41:34.511869 ===
+
+[08:41:34] Resume mode: 6225 records already saved — will skip them.
+[08:41:34] 
+=== STEP 1: Fetching city list ===
+[08:41:34] Fetching city list from facets API...
+[08:41:36]   ⚠ Could not fetch cities: 'str' object has no attribute 'get'
+[08:41:36]   Falling back to Algolia facet query...
+[08:41:37]   Found 87 cities via Algolia facets
+[08:41:37] 
+=== STEP 2: Collecting workshops from Algolia ===
+[08:41:37] 
+Scraping Algolia for 87 cities...
+[08:42:20]   ⚠ Côtes d'Armor: Algolia 400
+[08:42:21]   ⚠ Ile d'Oléron: Algolia 400
+[08:42:59] Total unique workshops collected: 2,672
+[08:42:59] 
+=== STEP 3: Reverse geocoding addresses ===
+[08:42:59] Reverse geocoding 2,672 workshops via OpenStreetMap Nominatim...
+[08:42:59]   Rate limit: 1 req/sec → estimated 45 min
+[10:05:27]   Saved 2,672  |  Geocoded 2,670  |  No coords 2
+[10:05:27] 
+=======================================================
+[10:05:27] ✓  Done in 5032.9s  (83.9 min)
+[10:05:27] ✓  Total records in CSV : 8,897
+[10:05:27] Writing XLSX...
+[10:05:33] ✓  CSV  → wecandoo_ateliers.csv
+[10:05:33] ✓  XLSX → wecandoo_ateliers.xlsx
+[10:05:33] ✓  Street fill rate: 8,608/8,897 (96.8%)
+[10:05:33] 
+── First 5 rows ──
+[10:05:33]                                                                           title   city                            street house_number  postcode             neighbourhood  price
+0       Fabriquez vos burratas et votre stracciatella avec Julien et son équipe  Paris  151 Rue du Faubourg Poissonnière          151   75009.0   Paris 9e Arrondissement   59.0
+1                               Réalisez votre œuvre en mosaïque avec Alexandra  Paris                      Rue Bridaine          NaN   75017.0  Quartier des Batignolles   90.0
+2            Créez votre grand terrarium (taille L) avec Benjamin et son équipe  Paris                      Rue de Patay          NaN   75013.0  Paris 13e Arrondissement   69.0
+3  Préparez et dégustez vos raviolis frais artisanaux avec Julien et son équipe  Paris  151 Rue du Faubourg Poissonnière          151   75009.0   Paris 9e Arrondissement   65.0
+4              Initiez-vous au tour de potier avec Pierre-Antoine et son équipe  Paris                80 Rue d'Amsterdam           80   75008.0    Quartier Saint-Georges   60.0
